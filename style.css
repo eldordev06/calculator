@@ -1,0 +1,93 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* VARIABLES */
+:root {
+    /* COLORS */
+    --Background: hsl(0, 0%, 20%);
+    --OverallBackground: hsl(0, 0%, 15%);
+    --Text: hsl(0, 0%, 100%);
+    --NumberButtons: hsl(0, 0%, 80%);
+    --NumberButtonsHover: hsl(0, 0%, 90%);
+    --NumberButtonsActive: hsl(0, 0%, 100%);
+    --OperationButtons: hsl(30, 100%, 50%);
+    --OperationButtonsHover: hsl(30, 100%, 60%);
+    --OperationButtonsActive: hsl(30, 100%, 70%);
+}
+
+/* GENERAL */
+
+body {
+    height: 100vh;
+    background-color: var(--OverallBackground);
+    color: var(--Text);
+}
+
+#calculator {
+    background-color: var(--Background);
+    max-width: 500px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: clamp(1rem, 3vmax, 3rem);
+    padding: 3vmin;
+}
+
+#display {
+    width: 100%;
+    font-size: clamp(2rem, 5vmax, 5rem);
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    color: white;
+    color: inherit;
+    outline: none;
+    padding-bottom: 8%;
+}
+
+#display::placeholder {
+    color: inherit;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vmin;
+}
+
+button {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--NumberButtons);
+    font-size: inherit;
+    font-weight: thin;
+    color: inherit;
+}
+
+button:hover {
+    background-color: var(--NumberButtonsHover);
+}
+
+button:active {
+    background-color: var(--NumberButtonsActive);
+}
+
+.operation-btn {
+    background-color: var(--OperationButtons);
+}
+
+.operation-btn:hover {
+    background-color: var(--OperationButtonsHover);
+}
+
+.operation-btn:active {
+    background-color: var(--OperationButtonsActive);
+}
